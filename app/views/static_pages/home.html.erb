@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center jumbotron-title">book a study group</h1>
+    <h2 class="text-center">online study session</h2>
+  </div>
+
+  <div class="container text-center">
+    <% if user_signed_in? %>
+      <a><%= link_to("join a group", root_path, class: "btn btn-primary outline") %></a>
+    <% else %>
+      <a><%= link_to("Sign up", new_user_registration_path, class: "btn btn-primary outline") %></a>
+      <a><%= link_to("Log in", new_user_session_path, class: "btn btn-primary outline") %></a>
+    <% end %>
+  </div>
+
+  <div class="container text-center footer-links">
+    <h5>
+      <a><%= link_to("faq", faq_path, class: "unstyled") %></a> ·
+      <a><%= link_to("contact", contact_path, class: "unstyled") %></a> ·
+      <a><%= link_to("offline study", offline_study_path, class: "unstyled") %></a>
+    </h5>
+  </div>
+
+</div>
